@@ -42,7 +42,6 @@ app.get('/api/data/:sector', (req: Request, res: Response) => queryData(res, { s
 app.get('/api/data/:sector/:type', (req: Request, res: Response) => queryData(res, { sector: req.params.sector, dataType: req.params.type }));
 
 app.post('/api/data', (req: Request, res: Response) => {
-    console.log(req.body);
     const data: Data = new Data(req.body);
 
     if (!data.isValid()) {
