@@ -7,7 +7,7 @@ export class Data {
     constructor(json:any) {
         this.sector = json.sector;
         this.dataType = json.dataType;
-        this.data = json.data;
+        this.data = parseFloat(json.data);
     }
 
     isValid(): boolean {
